@@ -2,23 +2,25 @@
 const startBtn = document.querySelector('.start-btn')
 const session = document.querySelector('.minutes')
 const resetBtn = document.getElementById('reset-btn')
-const secondDiv = document.querySelector('.seconds');
+const secondDiv = document.querySelector('.seconds')
+let freshStart = true
 
 let myInterval;
 let isRunning = false;
 let totalSeconds;
 
 const startTimer = () => {
+
     if (isRunning) return;
+
     isRunning = true;
     startBtn.textContent = 'STOP';
 
-    if (startBtn.textContent === 'STOP'){
-        totalSeconds = secondDiv.textContent
-    }   
-
-    const sessionAmount = Number.parseInt(session.textContent);
-    totalSeconds = sessionAmount * 60;
+    if (freshStart) {
+        const sessionAmount = Number.parseInt(session.textContent);
+        totalSeconds = sessionAmount * 60;
+        freshStart = false;
+    }
 
     myInterval = setInterval(updateSeconds, 1000);
 };
@@ -27,9 +29,6 @@ const stopTimer = () => {
     clearInterval(myInterval)
     isRunning = false;
     startBtn.textContent = 'START'
-   
-
-
 }
 
 
@@ -37,8 +36,10 @@ const stopTimer = () => {
 const resetTimer = () => {
     isRunning = false;
     clearInterval(myInterval)
+    freshStart = true
+
     session.textContent = '25'
-    //secondDiv.textContent == '00'
+    secondDiv.textContent = '00'
 
 };
 
@@ -96,7 +97,12 @@ const taskList = document.getElementById('task-list')
 const inputForm = document.querySelector('.input-form');
 const btnDelete = document.getElementById('btn-delete-task')
 
+
+let firtstask = true;
 saveBtn.addEventListener('click', () => {
+
+
+
     const taskText = tarea.value.trim();
 
     if (taskText !== '') {
@@ -110,6 +116,11 @@ saveBtn.addEventListener('click', () => {
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = '✅';
         deleteBtn.className = 'delete-task-btn';
+        if(firtstask){
+            alert('Press the ✅ when you have finished the task')
+            firtstask = false;
+        }
+        
 
 
         deleteBtn.addEventListener('click', (event) => {
