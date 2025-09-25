@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto mono", monospace;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f4baa;
+
+    padding: 20px;
+    gap: 30px;
+    position: relative;
+    flex-direction: column;
+
+}
+
+body .pomodoro-mode {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(125, 145, 197);
+    padding: 20px;
+    gap: 30px;
+    position: relative;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+.tres-botones button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.tres-botones button.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#timers {
+    width: 100%;
+    max-width: 600px;
+    min-height: 400px;
+    background-color: #4768b0;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+
+}
+
+
+
+.botones-timer {
+    row-gap: 2px;
+    padding: 2px;
+    flex-direction: column;
+    align-items: center;
+    display: inline;
+    width: 20%;
+    height: 30em;
+    border-radius: 10px;
+
+}
+
+button {
+    font-size: 15px;
+    display: inline;
+    text-align: center;
+    background-color: #1b3368;
+    border-radius: 10px 10px 10px 10px;
+    height: 50px;
+    width: 135px;
+    padding: 15px;
+    gap: 30px;
+    cursor: pointer;
+    color: white;
+    border: 0;
+    transition-duration: 0.4ms;
+    font-family: "Roboto mono", monospace;
+
+
+}
+
+button:hover {
+    background-color: #0b4adf;
+    color: white;
+    box-shadow: none;
+
+}
+
+#start {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+
+
+}
+
+
+
+h1 {
+    font-size: 6rem;
+    color: whitesmoke;
+    margin-bottom: 5px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto mono", monospace;
+
+}
+
+h2 {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto mono", monospace;
+}
+
+h3 {
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto mono", monospace;
+}
+
+
+
+
+.task {
+
+    padding: 10px;
+    border: none;
+    border-radius: 20px 20px 20px 20px;
+    width: 600px;
+    border-style: dashed;
+    border-width: 3px;
+    border-spacing: 10em;
+    border-color: rgb(217, 201, 201);
+
+}
+
+#tareas {
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+
+}
+
+.button-save {
+    padding: 10px;
+
+}
+
+
+
+.task1 {
+    text-align: center;
+
+    align-items: baseline;
+    justify-content: center;
+
+    width: 600px;
+    height: 100%;
+    padding: 70px;
+
+
+
+}
+
+#task-input {
+    width: 300px;
+    text-align: center;
+    height: 80px;
+    border: none;
+}
+
+h5 {
+    font-size: 0.7rem;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto mono", monospace;
+}
+
+.task1 h3 {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+
+    justify-content: center;
+}
+
+.task1 h3 img {
+    vertical-align: middle;
+}
+
+.tareas {
+    width: 100%;
+    max-width: 600px;
+    min-height: 400px;
+}
+
+
+/*Area de lista*/
+#lista-tarea {
+    background-color: #4768b0;
+    width: 600px;
+    height: 600px;
+    display: block;
+    border-radius: 20px 20px 20px 20px;
+}
+
+#task-list {
+    color: #ffffff;
+    text-align: center;
+    font-family: "Roboto mono", monospace;
+    border: none;
+
+}
+
+ul {
+    display: inline;
+    list-style: none;
+
+}
+
+li {
+    padding: 10px;
+    text-align: center;
+}
+
+.delete-task-btn {
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.delete-task-btn:hover {
+    background-color: transparent;
+}
