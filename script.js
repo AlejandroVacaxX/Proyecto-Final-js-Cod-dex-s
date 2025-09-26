@@ -49,10 +49,10 @@ const updateSeconds = () => {
 
     totalSeconds--;
 
-    // Asegúrate de que totalSeconds no sea negativo
+    
     if (totalSeconds < 0) {
         stopTimer();
-        //bells.play();
+       
         return;
     }
 
@@ -79,14 +79,8 @@ startBtn.addEventListener('click', () => {
 
 
 resetBtn.addEventListener('click', () => {
-    if (isRunning) {
         resetTimer()
         startTimer()
-    }
-    else {
-        alert('Timer is not running')
-    }
-
 })
 
 //funcion que agrega tareas a un lu
@@ -131,7 +125,7 @@ saveBtn.addEventListener('click', () => {
         newTask.appendChild(taskSpan);
         newTask.appendChild(deleteBtn);
 
-        // Agrega la nueva tarea a la lista principal
+        // agrega la nueva tarea a la lista principal
         taskList.appendChild(newTask);
 
         tarea.value = '';
